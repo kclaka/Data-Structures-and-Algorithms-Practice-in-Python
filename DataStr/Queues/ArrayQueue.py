@@ -32,6 +32,8 @@ class ArrayQueue(object):
         self._data[self.front] = None
         self._front = (self._front) % len(self._data)
         self.size -= 1
+        if 0 < self. size < len(self. data) // 4:
+            self. resize(len(self. data) // 2)
         return answer
 
     def enqueue(self, e):
